@@ -82,14 +82,43 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-xl-12 wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="about-item-content bg-white rounded p-5 h-100">
+                <div class="about-item-content bg-white rounded p-2 h-100">
                     <div class="container">
                         <div class="row">
-                          <div class="col">col</div>
-                          <div class="col">col</div>
-                          <div class="col">col</div>
-                          <div class="col">col</div>
-                          <div class="col">col</div>
+                            <div class="col"></div>
+                          <div class="col">
+                            <div class="w-75" style="width: 18rem;">
+                                <img src="{{url('img/news.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fs-6 text-center">Berita Desa</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="w-75" style="width: 18rem;">
+                                <img src="{{url('img/info.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fs-6 text-center">Informasi Desa</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="w-75" style="width: 18rem;">
+                                <img src="{{url('img/image.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fs-6 text-center">Galeri Desa</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="w-75" style="width: 18rem;">
+                                <img src="{{url('img/pengurus.png')}}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="fs-6 text-center">Pengurus Desa</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col"></div>
                         </div>
                       </div>
                 </div>

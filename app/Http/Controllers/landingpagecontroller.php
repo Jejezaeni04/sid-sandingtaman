@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aparatur;
+use App\Models\bagan;
 use App\Models\Berita;
 use App\Models\dusun;
 use App\Models\galeri;
@@ -38,7 +39,8 @@ class landingpagecontroller extends Controller
     function struktur(){
         $dusun = dusun::all();
         $aparat = Aparatur::all();
-        return view('warga.strukturorganisasi',compact('aparat','dusun'));
+        $bagan = bagan::all();
+        return view('warga.strukturorganisasi',compact('aparat','dusun','bagan'));
     }
 
     function perangkatdesa(){
@@ -84,5 +86,10 @@ class landingpagecontroller extends Controller
         $dusun = dusun::all();
         $galeri = galeri::all();
         return view('warga.galeri',compact('galeri','dusun'));
+    }
+    function lembaga_desa(){
+        $dusun = dusun::all();
+        $bagan = bagan::all();
+        return view('warga.lembaga_desa',compact('dusun','bagan'));
     }
 }

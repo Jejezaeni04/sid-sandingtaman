@@ -75,7 +75,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item {{ (Route::is('aparatur','visi_misi','sejarah')) ? 'active' : ''}}">
+            <li class="nav-item {{ (Route::is('aparatur','visi_misi','sejarah','bagan.index')) ? 'active' : ''}}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -86,6 +86,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Perangkat Desa :</h6>
                         <a class="collapse-item {{ (Route::is('aparatur')) ? 'active' : ''}}" href="{{route('aparatur')}}">Kepengurusan</a>
+                        <a class="collapse-item {{ (Route::is('bagan.index')) ? 'active' : ''}}" href="{{route('bagan.index')}}">Struktur Organisasi</a>
                         <a class="collapse-item {{ (Route::is('visi_misi')) ? 'active' : ''}}" href="{{route('visi_misi')}}">Visi & Misi</a>
                         <a class="collapse-item {{ (Route::is('sejarah')) ? 'active' : ''}}" href="{{route('sejarah')}}">Sejarah Desa</a>
                         

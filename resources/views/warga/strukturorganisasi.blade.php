@@ -19,12 +19,40 @@
                 <div class="about-item-content bg-white rounded p-3 h-100">
                     <div class="bg-light rounded">
                         <h4 class="text-primary text-center">Perangkat Desa</h4>
+                        @foreach ($aparat as $item)
                         <div class="ms-2">
-                            <a href="#" class="btn p-0">  <i class="fa fa-caret-right"></i>@foreach ($aparat->where('jabatan', 'Kepala Desa') as $item)
+                            <a href="#" class="btn p-0" data-bs-toggle="modal" data-bs-target="#myModal{{$item->id}}">
+                                <i class="fa fa-caret-right"></i>
                                 {{$item->jabatan}}
-                                @endforeach</a>      
+                            </a>
+                            <div class="modal fade" id="myModal{{$item->id}}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="modalLabel">Detail Perangkat Desa</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                          <div class="col-md-4">
+                                            <img src="{{ url('/storage/aparatur/'.$item->foto) }}" alt="Gambar" class="img-fluid rounded">
+                                          </div>
+                                          <div class="col-md-8">
+                                            <h5>{{$item->nama}}</h5>
+                                            <p><strong>Jabatan :</strong> {{$item->jabatan}}</p>
+                                            <p><strong>Alamat :</strong> {{$item->alamat}}</p>
+                                            <p><strong>Email :</strong> {{$item->email}}</p>
+                                            <p><strong>Tanggal Lahir :</strong> {{$item->tgl_lahir}}</p>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         </div>
-                        <div class="ms-2">
+                        @endforeach
+
+                        {{-- <div class="ms-2">
                             <a href="#" class="btn p-0">  <i class="fa fa-caret-right"></i>@foreach ($aparat->where('jabatan', 'Sekertaris Desa') as $item)
                                 {{$item->jabatan}}
                                 @endforeach</a>  
@@ -93,14 +121,17 @@
                             <a href="#" class="btn p-0">  <i class="fa fa-caret-right"></i>@foreach ($aparat->where('jabatan', 'Kepala Dusun Sanding') as $item)
                                 {{$item->jabatan}}
                             @endforeach</a>  
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
             <div class="col-xl-8 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="bg-white rounded p-3 h-100">
                     <div class="row bg-light rounded">
-                        <img src="{{url('img/struktur.jpg')}}" class="img-fluid rounded w-100" alt="">
+                        @foreach ($bagan->where('kategori','Perangkat Desa') as $item)
+                            
+                        <img src="{{ url('/storage/bagan/'.$item->gambar_bagan) }}" class="img-fluid rounded w-100" alt="">
+                        @endforeach
 
                     </div>
                 </div>
