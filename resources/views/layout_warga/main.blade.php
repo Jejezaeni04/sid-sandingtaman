@@ -70,14 +70,14 @@
                                     <a href="{{route('visimisi')}}" class="dropdown-item {{ (Route::is('visimisi')) ? 'active' : ''}}">Visi & Misi</a>
                                 </div>
                             </div>
-                            <div class="nav-item dropdown {{ (Route::is('strukturorganisasi','perangkat.desa')) ? 'active' : ''}}">
+                            <div class="nav-item dropdown {{ (Route::is('strukturorganisasi','perangkat.desa','lembaga.desa')) ? 'active' : ''}}">
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                     <span class="dropdown-toggle">Pemerintahan</span>
                                 </a>
                                 <div class="dropdown-menu">
                                     <a href="{{route('strukturorganisasi')}}" class="dropdown-item {{ (Route::is('strukturorganisasi')) ? 'active' : ''}}">Struktur Organisasi</a>
                                     <a href="{{route('perangkat.desa')}}" class="dropdown-item {{ (Route::is('perangkat.desa')) ? 'active' : ''}}">Perangkat Desa</a>
-                                    {{-- <a href="" class="dropdown-item">Lembaga Desa</a> --}}
+                                    <a href="{{route('lembaga.desa')}}" class="dropdown-item {{ (Route::is('lembaga.desa')) ? 'active' : ''}}">Lembaga Desa</a>
                                 </div>
                             </div>
                             <div class="nav-item dropdown {{ (Route::is('berita.terkini','kegiatan.terkini','wilayah.index')) ? 'active' : ''}}">

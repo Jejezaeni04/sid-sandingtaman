@@ -62,7 +62,7 @@
                         <option name="jabatan" value="Kaur Keuangan">Kaur Keuangan</option>
                         <option name="jabatan" value="Kaur Perencanaan">Kaur Perencanaan</option>
                         <option name="jabatan" value="Kasi Pemerintahan">Kasi Pemerintahan</option>
-                        <option name="jabatan" value="Kasi Kesehatan">Kasi Kesehatan</option>
+                        <option name="jabatan" value="Kasi Kesejahteraan">Kasi Kesejahteraan</option>
                         <option name="jabatan" value="Kasi Pelayanan">Kasi Pelayanan</option>
                         <option name="jabatan" value="Kepala Dusun Citaman">Kepala Dusun Citaman</option>
                         <option name="jabatan" value="Kepala Dusun Karoya">Kepala Dusun Karoya</option>

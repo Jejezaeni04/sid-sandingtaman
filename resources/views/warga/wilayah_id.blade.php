@@ -38,7 +38,7 @@
                                 <p class="text-dark">Jumlah Penduduk : <b>{{$wilayah->jumah_penduduk}}</b></p>
                             </div>
                             <div class="col-4">
-                                @foreach ($aparat->where('alamat', $wilayah->nama_dusun) as $item)
+                                @foreach ($aparat->where('nama',$wilayah->nama_aparat) as $item)
                                 <div class="card shadow-sm">
                                     <img src="{{url('/storage/aparatur/'.$item->foto)}}" class="bd-placeholder-img card-img-top" width="100%" height="225">
                                 </div>

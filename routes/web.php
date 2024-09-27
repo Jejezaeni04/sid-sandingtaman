@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\aparaturcontroller;
+use App\Http\Controllers\bagancontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\beritacontroller;
 use App\Http\Controllers\kegiatancontroller;
@@ -50,6 +51,7 @@ Route::controller(landingpagecontroller::class)->group(function(){
     Route::get('/wilayah','wilayah')->name('wilayah.index');
     Route::get('/wilayah-id/{nama_dusun}','id_wilayah')->name('wilayah.show');
     Route::get('/album-desa','album')->name('album.desa');
+    route::get('/lembaga-desa','lembaga_desa')->name('lembaga.desa');
 });
 Route::controller(pengaduancontroller::class)->group(function(){
     Route::post('/pengaduan-add','store')->name('pengaduan.store');
@@ -123,7 +125,15 @@ Route::middleware(['auth'])->group(function(){
         route::get('/pengaduan-add','create')->name('pengaduan.create');
         Route::delete('/pengaduan/hapus/{id}', 'destroy')->name('pengaduan.destroy');
         Route::get('/pengaduan/show/{id}', 'show')->name('pengaduan.show');
-
+    });
+    Route::controller(bagancontroller::class)->group(function(){
+        route::get('/bagan','index')->name('bagan.index');
+        route::get('/bagan-add','create')->name('bagan.create');
+        route::post('/bagan-strore','store')->name('bagan.store');
+        // route::get('/bagan-show/{id}','show')->name('bagan.show');
+        route::get('/bagan-edit/{id_bagan}','edit')->name('bagan.edit');
+        route::put('/bagan-edit-proses/{id_bagan}','update')->name('bagan.update');
+        route::delete('/bagan/hapus/{id_bagan}','destroy')->name('bagan.delete');
     });
 });
 
